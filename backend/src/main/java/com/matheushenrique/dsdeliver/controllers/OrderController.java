@@ -1,15 +1,20 @@
 package com.matheushenrique.dsdeliver.controllers;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.matheushenrique.dsdeliver.dto.OrderDTO;
 import com.matheushenrique.dsdeliver.services.OrderService;
+
 
 @RestController
 @RequestMapping("/orders")
@@ -25,5 +30,13 @@ public class OrderController {
 		
 		return ResponseEntity.ok().body(list);
 		
+	}
+	
+	@PostMapping
+	public ResponseEntity<OrderDTO> insert(@RequestBody OrderDTO orderDTO) {
+		orderDTO = orderService.insert(orderDTO);
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+					.buildAndExpand(orderDTO.getId()).toUri();
+		return ResponseEntity.created(uri).body(orderDTO);	
 	}
 }
