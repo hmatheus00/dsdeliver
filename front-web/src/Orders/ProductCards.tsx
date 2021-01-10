@@ -1,6 +1,5 @@
 import { type } from 'os';
 import ProductsList from './ProductsList';
-//import { ReactComponent as ImgPizza } from ''
 import { Product } from './types';
 
 type Props = {
