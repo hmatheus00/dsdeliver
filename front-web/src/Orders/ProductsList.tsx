@@ -1,3 +1,4 @@
+import React from 'react';
 import { type } from 'os';
 import { checkIsSelected } from './helpers';
 import ProductCards from './ProductCards';

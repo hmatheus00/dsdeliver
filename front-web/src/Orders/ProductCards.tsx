@@ -1,3 +1,4 @@
+import React from 'react';
 import { type } from 'os';
 import ProductsList from './ProductsList';
 import { Product } from './types';
