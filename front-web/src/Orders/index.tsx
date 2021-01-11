@@ -1,3 +1,4 @@
+import React from 'react'
 import StepsHeader from './StepsHeader';
 import ProductsList from './ProductsList';
 import './styles.css';

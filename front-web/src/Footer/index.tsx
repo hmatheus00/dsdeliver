@@ -1,3 +1,4 @@
+import React from 'react';
 import './styles.css';
 
 import { ReactComponent as Linkedin } from './img-linkedin.svg';
