@@ -16,7 +16,7 @@
   .orders-steps-content {
     display: flex;
     padding: 25px 0;
-    width: 70%;
+    width: 50%;
   }
   
   .steps-title {
@@ -25,11 +25,12 @@
     line-height: 34px;
     letter-spacing: -0.015em;
     color: var(--primary-color);
-    margin-right: 100px;
+    margin-left: 200px;
   }
   
   .steps-items {
     list-style-type: none;
+    margin-right: 800px;
   }
   
   .steps-items li {
